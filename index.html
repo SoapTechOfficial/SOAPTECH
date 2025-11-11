@@ -1,63 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOAPTECH</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1a1a1a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            padding: 40px;
-            max-width: 800px;
-            margin: auto;
-        }
-        footer {
-            background-color: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOAPTECH</title>
+<style>
+  /* Reset & basics */
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1a73e8;
+  }
+
+  /* Header */
+  header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+
+  header .logo {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+  }
+
+  /* Main content */
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+    background: white;
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Alternate slide directions */
+  .slide-left {
+    transform: translateX(-50px);
+  }
+
+  .slide-left.visible {
+    transform: translateX(0);
+  }
+
+  .slide-right {
+    transform: translateX(50px);
+  }
+
+  .slide-right.visible {
+    transform: translateX(0);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #1a73e8;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .btn:hover {
+    background: #155ab6;
+  }
+
+  /* Footer */
+  footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Responsive */
+  @media(max-width: 600px){
+    .section {
+      padding: 20px;
+    }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to SOAPTECH!</h1>
-    </header>
 
-    <main>
-        <p>SOAPTECH provides innovative digital tools, scripts, and tutorials to help developers and creators build, learn, and create more efficiently. Explore our resources and join a community where technology meets creativity.</p>
-        
-        <h2>What We Offer</h2>
-        <ul>
-            <li>Scripts and digital tools for developers</li>
-            <li>Tutorials and guides to boost your skills</li>
-            <li>Community support and collaboration</li>
-        </ul>
+<header>
+  <div class="logo"></div>
+  <h1>Welcome to SOAPTECH!</h1>
+</header>
 
-        <p>All content is protected under the <a href="LICENSE.txt">SOAPTECH Custom License</a>.</p>
-    </main>
+<main>
+  <div class="section slide-left">
+    <h2>Scripts & Tools</h2>
+    <p>High-quality scripts and tools for developers to streamline their projects and experiments.</p>
+    <a class="btn" href="#">View Scripts</a>
+  </div>
 
-    <footer>
-        MADE BY SOAPTECH
-    </footer>
+  <div class="section slide-right">
+    <h2>Tutorials & Guides</h2>
+    <p>Step-by-step tutorials to help creators learn new skills and grow their knowledge.</p>
+    <a class="btn" href="#">View Tutorials</a>
+  </div>
+
+  <div class="section slide-left">
+    <h2>Community & Collaboration</h2>
+    <p>Join our community to collaborate, share projects, and get support from fellow creators.</p>
+    <a class="btn" href="#">Join Community</a>
+  </div>
+
+  <div class="section slide-right">
+    <h2>Protected Content</h2>
+    <p>All content is protected under the <a href="LICENSE.txt">SOAPTECH Custom License</a>. The "MADE BY SOAPTECH" mark must remain visible.</p>
+    <a class="btn" href="#">Learn More</a>
+  </div>
+</main>
+
+<footer>
+  MADE BY SOAPTECH
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+
+  function checkVisibility() {
+    const triggerBottom = window.innerHeight * 0.85;
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < triggerBottom) {
+        section.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('load', checkVisibility);
+</script>
+
 </body>
 </html>

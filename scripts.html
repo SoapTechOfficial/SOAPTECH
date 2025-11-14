@@ -48,6 +48,13 @@
     <a class="btn" href="data:text/plain;charset=utf-8,local%20ball%20%3D%20Instance.new('Part')%0Aball.Name%20%3D%20'SOAPTECH_Ball'%0Aball.Shape%20%3D%20Enum.PartType.Ball%0Aball.Size%20%3D%20Vector3.new(3,3,3)%0Aball.Position%20%3D%20Vector3.new(10,5,0)%0Aball.Anchored%20%3D%20false%0Aball.Parent%20%3D%20workspace%0Aprint('⚡%20SOAPTECH%20Bouncing%20Ball%20spawned!')%0Alocal%20bodyVelocity%20%3D%20Instance.new('BodyVelocity')%0AbodyVelocity.MaxForce%20%3D%20Vector3.new(0,4000,0)%0AbodyVelocity.Velocity%20%3D%20Vector3.new(0,50,0)%0AbodyVelocity.Parent%20%3D%20ball%0Awhile%20true%20do%0A%20%20%20%20bodyVelocity.Velocity%20%3D%20Vector3.new(0,50,0)%0A%20%20%20%20wait(1)%0Aend" download="SOAPTECH_BouncingBall.lua">Download Bouncing Ball</a>
   </div>
 
+  <!-- Click-to-Teleport Tool -->
+  <div class="script-card">
+    <h2>🚀 Click-to-Teleport Tool</h2>
+    <p>Teleport your character to the location you click in the game. Great for exploring maps quickly or testing levels.</p>
+    <a class="btn" href="data:text/plain;charset=utf-8,local%20tool%20%3D%20Instance.new('Tool')%0Atool.Name%20%3D%20'ClickTeleport'%0Atool.RequiresHandle%20%3D%20false%0Atool.Parent%20%3D%20game.Players.LocalPlayer.Backpack%0Alocal%20mouse%20%3D%20game.Players.LocalPlayer:GetMouse()%0Amouse.Button1Down:Connect(function()%0A%20%20%20%20game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame%20%3D%20CFrame.new(mouse.Hit.Position)%0Aend)" download="ClickToTeleport.lua">Download Click-to-Teleport</a>
+  </div>
+
   <!-- Script in Development -->
   <div class="script-card" id="in-dev">
     <h2>🛠 SCRIPT IN DEVELOPMENT</h2>

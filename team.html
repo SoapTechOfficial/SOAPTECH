@@ -1,26 +1,99 @@
-<!-- Team Member 1 -->
-<div class="team-member">
-  <img src="soaplogo.png" alt="Soap">
-  <div class="team-info">
-    <h2>Soap</h2>
-    <p>Owner & Founder</p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet Our Team - SOAPTECH</title>
+<style>
+  body, html {
+    margin:0;
+    padding:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#0b0e13;
+    color:#d0d0d0;
+  }
 
-<!-- Team Member 2 -->
-<div class="team-member">
-  <img src="tyz.png" alt="Tyz">
-  <div class="team-info">
-    <h2>Tyz</h2>
-    <p>Community Manager/Moderator</p>
-  </div>
-</div>
+  a { text-decoration:none; color:#00c2b8; font-weight:500; }
 
-<!-- Team Member 3 -->
-<div class="team-member">
-  <img src="coowner.png" alt="Co-Owner">
-  <div class="team-info">
-    <h2>Co-Owner</h2>
-    <p>Yet to be Chosen</p>
+  header { background:#0f1218; color:#fff; padding:40px 20px; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.4); }
+  header h1 { margin:0; font-size:2.5em; color:#00c2b8; letter-spacing:1px; }
+
+  main { max-width:1000px; margin:0 auto; padding:50px 20px; }
+
+  .team-member {
+    background:#131821;
+    margin:25px 0;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
+    display:flex;
+    align-items:center;
+  }
+
+  .team-member img {
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    margin-right:20px;
+  }
+
+  .btn {
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 28px;
+    background:#00c2b8;
+    color:#0b0e13;
+    font-weight:bold;
+    border-radius:8px;
+    transition:0.3s;
+  }
+
+  .btn:hover {
+    background:#00e6d9;
+    transform:translateY(-2px);
+  }
+
+  footer {
+    background:#0f1218;
+    color:#00c2b8;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    font-weight:500;
+    letter-spacing:0.5px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Meet Our Team</h1>
+  <a class="btn" href="index.html">Back to Home</a>
+</header>
+<main>
+  <div class="team-member">
+    <img src="soaplogo.png" alt="Soap">
+    <div>
+      <h2>Soap</h2>
+      <p>Owner & Founder</p>
+    </div>
   </div>
-</div>
+
+  <div class="team-member">
+    <img src="coowner.png" alt="Co-Owner">
+    <div>
+      <h2>Co-Owner</h2>
+      <p>Yet to be Chosen</p>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <img src="tyz.png" alt="Tyz">
+    <div>
+      <h2>Tyz</h2>
+      <p>Community Manager/Moderator</p>
+    </div>
+  </div>
+</main>
+<footer>MADE BY SOAPTECH</footer>
+</body>
+</html>

@@ -37,28 +37,28 @@
   <!-- SOAPTECH Rainbow Part -->
   <div class="script-card">
     <h2>🌈 SOAPTECH Rainbow Part</h2>
-    <p>Spawns a floating part in your Roblox game that cycles through rainbow colors endlessly. Add some magical color to your world!</p>
-    <a class="btn" href="data:text/plain;charset=utf-8,local%20part%20%3D%20Instance.new('Part')%0Apart.Name%20%3D%20'SOAPTECH_Rainbow'%0Apart.Size%20%3D%20Vector3.new(5,1,5)%0Apart.Position%20%3D%20Vector3.new(0,5,0)%0Apart.Anchored%20%3D%20true%0Apart.Parent%20%3D%20workspace%0Aprint('🌈%20SOAPTECH%20Rainbow%20Part%20spawned!')%0Alocal%20colors%20%3D%20%7BColor3.fromRGB(255,0,0),Color3.fromRGB(255,165,0),Color3.fromRGB(255,255,0),Color3.fromRGB(0,255,0),Color3.fromRGB(0,0,255),Color3.fromRGB(75,0,130),Color3.fromRGB(238,130,238)%7D%0Awhile%20true%20do%0A%20%20%20%20for%20_%2C%20c%20in%20ipairs(colors)%20do%0A%20%20%20%20%20%20part.Color%20%3D%20c%0A%20%20%20%20%20%20wait(0.5)%0A%20%20%20%20end%0Aend" download="SOAPTECH_Rainbow.lua">Download Rainbow Script</a>
+    <p>Spawns a floating part in your Roblox game that cycles through rainbow colors endlessly. Add magical color to your world!</p>
+    <a class="btn" href="main/SOAPTECH_Rainbow.rbxm" download="SOAPTECH_Rainbow.rbxm">Download Rainbow Part</a>
   </div>
 
   <!-- SOAPTECH Bouncing Ball -->
   <div class="script-card">
     <h2>⚡ SOAPTECH Bouncing Ball</h2>
-    <p>Spawns a ball in your Roblox game that bounces endlessly. Perfect for adding fun motion and energy to any scene!</p>
-    <a class="btn" href="data:text/plain;charset=utf-8,local%20ball%20%3D%20Instance.new('Part')%0Aball.Name%20%3D%20'SOAPTECH_Ball'%0Aball.Shape%20%3D%20Enum.PartType.Ball%0Aball.Size%20%3D%20Vector3.new(3,3,3)%0Aball.Position%20%3D%20Vector3.new(10,5,0)%0Aball.Anchored%20%3D%20false%0Aball.Parent%20%3D%20workspace%0Aprint('⚡%20SOAPTECH%20Bouncing%20Ball%20spawned!')%0Alocal%20bodyVelocity%20%3D%20Instance.new('BodyVelocity')%0AbodyVelocity.MaxForce%20%3D%20Vector3.new(0,4000,0)%0AbodyVelocity.Velocity%20%3D%20Vector3.new(0,50,0)%0AbodyVelocity.Parent%20%3D%20ball%0Awhile%20true%20do%0A%20%20%20%20bodyVelocity.Velocity%20%3D%20Vector3.new(0,50,0)%0A%20%20%20%20wait(1)%0Aend" download="SOAPTECH_BouncingBall.lua">Download Bouncing Ball</a>
+    <p>Spawns a ball that bounces endlessly in your Roblox game. Perfect for fun motion and dynamic gameplay!</p>
+    <a class="btn" href="main/SOAPTECH_BouncingBall.rbxm" download="SOAPTECH_BouncingBall.rbxm">Download Bouncing Ball</a>
   </div>
 
-  <!-- Click-to-Teleport Tool -->
+  <!-- SOAPTECH Click-to-Teleport Tool -->
   <div class="script-card">
-    <h2>🚀 Click-to-Teleport Tool</h2>
-    <p>Teleport your character to the location you click in the game. Great for exploring maps quickly or testing levels.</p>
-    <a class="btn" href="data:text/plain;charset=utf-8,local%20tool%20%3D%20Instance.new('Tool')%0Atool.Name%20%3D%20'ClickTeleport'%0Atool.RequiresHandle%20%3D%20false%0Atool.Parent%20%3D%20game.Players.LocalPlayer.Backpack%0Alocal%20mouse%20%3D%20game.Players.LocalPlayer:GetMouse()%0Amouse.Button1Down:Connect(function()%0A%20%20%20%20game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame%20%3D%20CFrame.new(mouse.Hit.Position)%0Aend)" download="ClickToTeleport.lua">Download Click-to-Teleport</a>
+    <h2>🌀 SOAPTECH Click Teleport Tool</h2>
+    <p>Gives players a tool to click anywhere in the game and instantly teleport there. A fun and useful movement tool!</p>
+    <a class="btn" href="main/SOAPTECH_ClickTeleport.rbxm" download="SOAPTECH_ClickTeleport.rbxm">Download Teleport Tool</a>
   </div>
 
   <!-- Script in Development -->
   <div class="script-card" id="in-dev">
     <h2>🛠 SCRIPT IN DEVELOPMENT</h2>
-    <p>This script is currently in development. Stay tuned for new exciting SOAPTECH tools and features coming soon!</p>
+    <p>This script is currently in development. Stay tuned for exciting new SOAPTECH tools and features coming soon!</p>
   </div>
 
 </main>

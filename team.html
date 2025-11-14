@@ -3,178 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOAPTECH Team</title>
+<title>Meet the Team - SOAPTECH</title>
 <style>
   body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #0b0e13;
-    color: #d0d0d0;
-    scroll-behavior: smooth;
+    margin:0;
+    padding:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#0b0e13;
+    color:#d0d0d0;
   }
 
-  a {
-    text-decoration: none;
-    color: #00c2b8;
-    font-weight: 500;
-  }
+  a { text-decoration:none; color:#00c2b8; font-weight:500; }
 
   header {
-    background: #0f1218;
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    background:#0f1218;
+    color:#fff;
+    padding:40px 20px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.4);
   }
 
-  header img.logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
+  header h1 { margin:0; font-size:2.5em; color:#00c2b8; letter-spacing:1px; }
 
-  header h1 {
-    margin: 0;
-    font-size: 2em;
-    color: #00c2b8;
-    letter-spacing: 1px;
-  }
-
-  main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 50px 20px;
-  }
-
-  .team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
-  }
+  main { max-width:1000px; margin:0 auto; padding:50px 20px; }
 
   .team-member {
-    background: #131821;
-    border-radius: 12px;
-    padding: 25px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
+    background:#131821;
+    margin:25px 0;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
+    display:flex;
+    align-items:center;
+    gap:20px;
   }
 
-  .team-member.visible {
-    opacity: 1;
-    transform: translateY(0);
+  .team-member img {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    border: 3px solid #00c2b8;
   }
 
-  .team-member img.team-pfp {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-  }
+  .team-info h2 { margin:0; color:#00c2b8; }
+  .team-info p { margin:5px 0 0 0; font-weight:500; }
 
-  .team-member h3 {
-    margin: 10px 0 5px;
-    color: #00c2b8;
-  }
+  .btn { display:inline-block; margin-top:20px; padding:12px 28px; background:#00c2b8; color:#0b0e13; font-weight:bold; border-radius:8px; transition:0.3s; }
+  .btn:hover { background:#00e6d9; transform:translateY(-2px); }
 
-  .team-member p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #c0c0c0;
-  }
+  footer { background:#0f1218; color:#00c2b8; text-align:center; padding:25px; margin-top:40px; font-weight:500; letter-spacing:0.5px; }
 
-  footer {
-    background: #0f1218;
-    color: #00c2b8;
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-  }
-
-  .btn-back {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
-    background: #00c2b8;
-    color: #0b0e13;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: 0.3s;
-  }
-
-  .btn-back:hover {
-    background: #00e6d9;
-    transform: translateY(-2px);
-  }
-
-  @media(max-width:600px){
-    .team-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="soaptech_logo.png" alt="SOAPTECH Logo" class="logo">
-  <h1>Meet the SOAPTECH Team</h1>
+  <h1>Meet the Team</h1>
+  <a class="btn" href="index.html">Back to Home</a>
 </header>
 
 <main>
-  <div class="team-grid">
-    <!-- Owner -->
-    <div class="team-member slide-left">
-      <img src="Soapfp.png" alt="Soap" class="team-pfp">
-      <h3>Soap</h3>
-      <p>Owner of SOAPTECH</p>
-    </div>
 
-    <!-- Co-Owner Placeholder -->
-    <div class="team-member slide-right">
-      <h3>Co-Owner</h3>
-      <p>Yet to be chosen</p>
+  <!-- Team Member 1 -->
+  <div class="team-member">
+    <img src="images/soap.png" alt="Soap">
+    <div class="team-info">
+      <h2>Soap</h2>
+      <p>Owner & Founder</p>
     </div>
   </div>
 
-  <a href="index.html" class="btn-back">Back to Home</a>
+  <!-- Team Member 2 -->
+  <div class="team-member">
+    <img src="images/coowner.png" alt="Co-Owner">
+    <div class="team-info">
+      <h2>Co-Owner</h2>
+      <p>Yet to be Chosen</p>
+    </div>
+  </div>
+
+  <!-- Team Member 3 -->
+  <div class="team-member">
+    <img src="images/tyz.png" alt="Tyz">
+    <div class="team-info">
+      <h2>Tyz</h2>
+      <p>Community Manager / Moderator</p>
+    </div>
+  </div>
+
 </main>
 
-<footer>
-  MADE BY SOAPTECH
-</footer>
-
-<script>
-  const teamMembers = document.querySelectorAll('.team-member');
-
-  function checkVisibility() {
-    const triggerBottom = window.innerHeight * 0.85;
-
-    teamMembers.forEach(member => {
-      const memberTop = member.getBoundingClientRect().top;
-      if (memberTop < triggerBottom) {
-        member.classList.add('visible');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', checkVisibility);
-  window.addEventListener('load', checkVisibility);
-</script>
+<footer>MADE BY SOAPTECH</footer>
 
 </body>
 </html>

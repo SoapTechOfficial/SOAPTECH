@@ -15,6 +15,8 @@
   a { text-decoration:none; color:#00c2b8; font-weight:500; }
   header { background:#0f1218; color:#fff; padding:40px 20px; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.4); }
   header h1 { margin:0; font-size:2.5em; color:#00c2b8; letter-spacing:1px; }
+  header .nav-btns { margin-top:15px; }
+  header .nav-btns .btn { margin-right:10px; }
   main { max-width:1000px; margin:0 auto; padding:50px 20px; }
   .script-card { background:#131821; margin:25px 0; padding:25px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.4); }
   .btn { display:inline-block; margin-top:15px; padding:12px 28px; background:#00c2b8; color:#0b0e13; font-weight:bold; border-radius:8px; transition:0.3s; }
@@ -25,20 +27,33 @@
 <body>
 <header>
   <h1>Scripts & Tools</h1>
-  <a class="btn" href="index.html">Back to Home</a>
+  <div class="nav-btns">
+    <a class="btn" href="index.html">Back to Home</a>
+    <a class="btn" href="#in-dev">Script in Development</a>
+  </div>
 </header>
 <main>
+
+  <!-- SOAPTECH Rainbow Part -->
   <div class="script-card">
-    <h2>Example Script 1</h2>
-    <p>This script does X, Y, and Z to make development easier.</p>
-    <a class="btn" href="scripts/example1.js">Download Script</a>
+    <h2>🌈 SOAPTECH Rainbow Part</h2>
+    <p>Spawns a floating part in your Roblox game that cycles through rainbow colors endlessly. Add some magical color to your world!</p>
+    <a class="btn" href="data:text/plain;charset=utf-8,local%20part%20%3D%20Instance.new('Part')%0Apart.Name%20%3D%20'SOAPTECH_Rainbow'%0Apart.Size%20%3D%20Vector3.new(5,1,5)%0Apart.Position%20%3D%20Vector3.new(0,5,0)%0Apart.Anchored%20%3D%20true%0Apart.Parent%20%3D%20workspace%0Aprint('🌈%20SOAPTECH%20Rainbow%20Part%20spawned!')%0Alocal%20colors%20%3D%20%7BColor3.fromRGB(255,0,0),Color3.fromRGB(255,165,0),Color3.fromRGB(255,255,0),Color3.fromRGB(0,255,0),Color3.fromRGB(0,0,255),Color3.fromRGB(75,0,130),Color3.fromRGB(238,130,238)%7D%0Awhile%20true%20do%0A%20%20%20%20for%20_%2C%20c%20in%20ipairs(colors)%20do%0A%20%20%20%20%20%20part.Color%20%3D%20c%0A%20%20%20%20%20%20wait(0.5)%0A%20%20%20%20end%0Aend" download="SOAPTECH_Rainbow.lua">Download Rainbow Script</a>
   </div>
 
+  <!-- SOAPTECH Bouncing Ball -->
   <div class="script-card">
-    <h2>Example Script 2</h2>
-    <p>Automates A, B, and C for a smoother workflow.</p>
-    <a class="btn" href="scripts/example2.js">Download Script</a>
+    <h2>⚡ SOAPTECH Bouncing Ball</h2>
+    <p>Spawns a ball in your Roblox game that bounces endlessly. Perfect for adding fun motion and energy to any scene!</p>
+    <a class="btn" href="data:text/plain;charset=utf-8,local%20ball%20%3D%20Instance.new('Part')%0Aball.Name%20%3D%20'SOAPTECH_Ball'%0Aball.Shape%20%3D%20Enum.PartType.Ball%0Aball.Size%20%3D%20Vector3.new(3,3,3)%0Aball.Position%20%3D%20Vector3.new(10,5,0)%0Aball.Anchored%20%3D%20false%0Aball.Parent%20%3D%20workspace%0Aprint('⚡%20SOAPTECH%20Bouncing%20Ball%20spawned!')%0Alocal%20bodyVelocity%20%3D%20Instance.new('BodyVelocity')%0AbodyVelocity.MaxForce%20%3D%20Vector3.new(0,4000,0)%0AbodyVelocity.Velocity%20%3D%20Vector3.new(0,50,0)%0AbodyVelocity.Parent%20%3D%20ball%0Awhile%20true%20do%0A%20%20%20%20bodyVelocity.Velocity%20%3D%20Vector3.new(0,50,0)%0A%20%20%20%20wait(1)%0Aend" download="SOAPTECH_BouncingBall.lua">Download Bouncing Ball</a>
   </div>
+
+  <!-- Script in Development -->
+  <div class="script-card" id="in-dev">
+    <h2>🛠 SCRIPT IN DEVELOPMENT</h2>
+    <p>This script is currently in development. Stay tuned for new exciting SOAPTECH tools and features coming soon!</p>
+  </div>
+
 </main>
 <footer>MADE BY SOAPTECH</footer>
 </body>

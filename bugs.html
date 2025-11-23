@@ -3,20 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOAPTECH — Bug Reports</title>
-<link rel="stylesheet" href="style.css">
+<title>SOAPTECH — Bugs & Suggestions</title>
 
 <style>
   body {
     background: #0b0e13;
     font-family: 'Segoe UI', Arial, sans-serif;
-    color: #d0d0d0;
     margin: 0;
+    color: #d0d0d0;
   }
 
   header {
     background: #0f1218;
-    padding: 30px;
+    padding: 35px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
   }
@@ -24,41 +23,66 @@
   header h1 {
     color: #00c2b8;
     margin: 0;
+    font-size: 2.2em;
   }
 
   main {
     max-width: 900px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 25px;
     background: #131821;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
   }
 
-  iframe {
-    width: 100%;
-    height: 950px;
-    border: none;
-    border-radius: 10px;
+  section {
+    margin-bottom: 60px;
   }
 
-  a {
+  h2 {
     color: #00c2b8;
+    margin-bottom: 15px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    border-radius: 10px;
+    background: #0f1218;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>SOAPTECH — Bug Reporter</h1>
+  <h1>SOAPTECH — Bugs & Suggestions</h1>
 </header>
 
 <main>
-  <p>If you found an issue in any SOAPTECH script, tool, or page — submit it below.</p>
 
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevPrxgQumS6fE5x_xCKO1j1LSbkx6jGlfEGcC25TcK_SvB4Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <!-- BUG FORM -->
+  <section>
+    <h2>Report a Bug</h2>
+    <p>Found an issue with a SOAPTECH script, tool, or page? Submit it here.</p>
 
-  <p style="margin-top:20px;">Staff Only: View responses inside the linked Google Sheet.</p>
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSevPrxgQumS6fE5x_xCKO1j1LSbkx6jGlfEGcC25TcK_SvB4Q/viewform?embedded=true">
+      Loading…
+    </iframe>
+  </section>
+
+  <!-- SUGGESTION FORM -->
+  <section>
+    <h2>Submit a Suggestion</h2>
+    <p>Have an idea to make SOAPTECH better? We want to hear it.</p>
+
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdTA_tMuczshhhlEIuWXFSGgRhvf0E79oE6_gMevwXcnQJbyA/viewform?embedded=true">
+      Loading…
+    </iframe>
+  </section>
+
 </main>
 
 </body>

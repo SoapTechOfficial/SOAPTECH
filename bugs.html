@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOAPTECH — Bugs & Suggestions</title>
-
+<title>SOAPTECH Bug Reports & Suggestions</title>
 <style>
   body {
     background: #0b0e13;
@@ -30,58 +29,63 @@
     max-width: 900px;
     margin: 40px auto;
     padding: 25px;
-    background: #131821;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
   }
 
-  section {
-    margin-bottom: 60px;
+  .section {
+    background: #131821;
+    padding: 35px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    text-align: center;
   }
 
   h2 {
     color: #00c2b8;
-    margin-bottom: 15px;
+    margin-top: 0;
   }
 
-  iframe {
-    width: 100%;
-    height: 900px;
-    border: none;
-    border-radius: 10px;
-    background: #0f1218;
+  p {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background: #00c2b8;
+    color: #0b0e13;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: #00e6d9;
+    transform: translateY(-2px);
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>SOAPTECH — Bugs & Suggestions</h1>
+  <h1>Bug Reports & Suggestions</h1>
 </header>
 
 <main>
 
-  <!-- BUG FORM -->
-  <section>
+  <div class="section">
     <h2>Report a Bug</h2>
-    <p>Found an issue with a SOAPTECH script, tool, or page? Submit it here.</p>
+    <p>Found a bug in SOAPTECH? Submit it here so our team can fix it!</p>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdp4Yi7OxV5Op20LGVQAgYxVaI9fdmBk1eOkdRCMKZFb2YIoQ/viewform?usp=sharing&ouid=104669770874371357171" target="_blank">Submit a Bug</a>
+  </div>
 
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSevPrxgQumS6fE5x_xCKO1j1LSbkx6jGlfEGcC25TcK_SvB4Q/viewform?embedded=true">
-      Loading…
-    </iframe>
-  </section>
-
-  <!-- SUGGESTION FORM -->
-  <section>
+  <div class="section">
     <h2>Submit a Suggestion</h2>
-    <p>Have an idea to make SOAPTECH better? We want to hear it.</p>
-
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdTA_tMuczshhhlEIuWXFSGgRhvf0E79oE6_gMevwXcnQJbyA/viewform?embedded=true">
-      Loading…
-    </iframe>
-  </section>
+    <p>Have an idea to improve SOAPTECH? Send us your suggestion!</p>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSecFPZq5jbT2Esu28X1t6auMGQj_x0aUbWZatqbiAck7v9eBQ/viewform?usp=dialog" target="_blank">Submit a Suggestion</a>
+  </div>
 
 </main>
 

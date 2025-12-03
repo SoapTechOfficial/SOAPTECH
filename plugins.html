@@ -6,19 +6,11 @@
 <title>SOAPTECH Plugins</title>
 
 <style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
+  body {
     background: #0b0e13;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
     color: #d0d0d0;
-    scroll-behavior: smooth;
-  }
-
-  a {
-    text-decoration: none;
-    color: #00c2b8;
-    font-weight: 500;
   }
 
   header {
@@ -38,7 +30,6 @@
     max-width: 900px;
     margin: 40px auto;
     padding: 25px;
-    text-align: center;
   }
 
   .section {
@@ -47,14 +38,6 @@
     border-radius: 12px;
     margin-bottom: 50px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
-  }
-
-  .section.visible {
-    opacity: 1;
-    transform: translateY(0);
   }
 
   h2 {
@@ -62,17 +45,14 @@
     margin-top: 0;
   }
 
-  p {
-    margin-bottom: 20px;
-  }
-
   .btn {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 12px 24px;
+    margin-top: 15px;
     background: #00c2b8;
     color: #0b0e13;
-    font-weight: bold;
     border-radius: 8px;
+    font-weight: bold;
     transition: 0.3s;
     text-decoration: none;
   }
@@ -90,32 +70,24 @@
 </header>
 
 <main>
+
+  <!-- SOAPTECH DevHelper Plugin -->
   <div class="section">
-    <h2>Available Plugins</h2>
-    <p>No plugins are currently published. Stay tuned for new SOAPTECH plugins coming soon!</p>
+    <h2>SOAPTECH DevHelper</h2>
+    <p>A must-have plugin for developers! Streamline your Roblox creation workflow and debug with ease.</p>
+    <a class="btn" href="https://create.roblox.com/store/asset/79541703966877/SOAPTECH-DevHelper" target="_blank">View Plugin</a>
   </div>
 
+  <!-- Suggest a Plugin Button -->
   <div class="section">
     <h2>Suggest a Plugin</h2>
-    <p>Have an idea for a plugin that would make development easier or more fun? Let us know!</p>
+    <p>Have a plugin idea that would help creators? Submit it using the form below.</p>
     <a class="btn" href="https://forms.gle/KHcxzzeU84ZBKjcCA" target="_blank">Suggest a Plugin</a>
   </div>
-</main>
 
-<script>
-  const sections = document.querySelectorAll('.section');
-  function checkVisibility() {
-    const triggerBottom = window.innerHeight * 0.85;
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      if (sectionTop < triggerBottom) {
-        section.classList.add('visible');
-      }
-    });
-  }
-  window.addEventListener('scroll', checkVisibility);
-  window.addEventListener('load', checkVisibility);
-</script>
+  <a class="btn" href="index.html">Back to Home</a>
+
+</main>
 
 </body>
 </html>

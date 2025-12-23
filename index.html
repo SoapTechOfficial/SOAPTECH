@@ -1,136 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOAPTECH</title>
-<style>
-  /* Reset & basics */
-  body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #0b0e13;
-    color: #d0d0d0;
-    scroll-behavior: smooth;
-  }
-
-  a {
-    text-decoration: none;
-    color: #00c2b8;
-    font-weight: 500;
-  }
-
-  /* Header */
-  header {
-    background: #0f1218;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-  }
-
-  header img.logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #00c2b8;
-    letter-spacing: 1px;
-  }
-
-  /* Main layout */
-  main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 50px 20px;
-  }
-
-  .section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
-    background: #131821;
-    margin: 50px 0;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Alternating slide animations */
-  .slide-left {
-    transform: translateX(-60px);
-  }
-  .slide-left.visible {
-    transform: translateX(0);
-  }
-
-  .slide-right {
-    transform: translateX(60px);
-  }
-  .slide-right.visible {
-    transform: translateX(0);
-  }
-
-  /* Buttons */
-  .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
-    background: #00c2b8;
-    color: #0b0e13;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: 0.3s;
-  }
-
-  .btn:hover {
-    background: #00e6d9;
-    transform: translateY(-2px);
-  }
-
-  /* Footer */
-  footer {
-    background: #0f1218;
-    color: #00c2b8;
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-  }
-
-  /* Responsive */
-  @media(max-width: 600px){
-    .section {
-      padding: 25px;
-    }
-  }
-</style>
-</head>
-<body>
-
-<header>
-  <img src="soaptech_logo.png" alt="SOAPTECH Logo" class="logo">
-  <h1>Welcome to SOAPTECH!</h1>
-</header>
-
 <main>
   <div class="section slide-left">
     <h2 style="color:#00c2b8;">Scripts & Tools</h2>
@@ -150,21 +17,6 @@
     <a class="btn" href="community.html">Join Community</a>
   </div>
 
-  <!-- NEW: SOAPTECH Plugins -->
-  <div class="section slide-right">
-    <h2 style="color:#00c2b8;">SOAPTECH Plugins</h2>
-    <p>Explore custom plugins made by SOAPTECH to enhance your projects and workflows.</p>
-    <a class="btn" href="plugins.html">View Plugins</a>
-  </div>
-
-  <!-- NEW: Bugs & Suggestions -->
-  <div class="section slide-left">
-    <h2 style="color:#00c2b8;">Bugs & Suggestions</h2>
-    <p>Found a bug or have an idea? Let us know so we can improve SOAPTECH for everyone!</p>
-    <a class="btn" href="bugs.html">Submit Feedback</a>
-  </div>
-
-  <!-- Meet Our Team Section -->
   <div class="section slide-right">
     <h2 style="color:#00c2b8;">Meet Our Team</h2>
     <p>Get to know the talented developers and creators behind SOAPTECH. See who’s building your favorite scripts and tools!</p>
@@ -173,30 +25,15 @@
 
   <div class="section slide-left">
     <h2 style="color:#00c2b8;">Protected Content</h2>
-    <p>All content is protected under the <a href="license.html">SOAPTECH Custom License</a>.<br>
+    <p>All content is protected under the <a href="license.html">SOAPTECH Custom License</a>.  
     The "MADE BY SOAPTECH" mark must remain visible.</p>
     <a class="btn" href="license.html">Learn More</a>
   </div>
+
+  <!-- NEW SECTION -->
+  <div class="section slide-right">
+    <h2 style="color:#00c2b8;">Looking For Something Else?</h2>
+    <p>Explore our other units and find the perfect tool or guide for your project!</p>
+    <a class="btn" href="Units.html">View Units</a>
+  </div>
 </main>
-
-<footer>
-  MADE BY SOAPTECH
-</footer>
-
-<script>
-  const sections = document.querySelectorAll('.section');
-  function checkVisibility() {
-    const triggerBottom = window.innerHeight * 0.85;
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      if (sectionTop < triggerBottom) {
-        section.classList.add('visible');
-      }
-    });
-  }
-  window.addEventListener('scroll', checkVisibility);
-  window.addEventListener('load', checkVisibility);
-</script>
-
-</body>
-</html>
